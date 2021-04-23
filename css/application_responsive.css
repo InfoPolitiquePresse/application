@@ -1,0 +1,66 @@
+/***************
+    Panneaux 
+****************/
+
+@media screen and (max-width: 992px) {
+
+    .btn-menu {
+        display: block;
+    }
+    .navbar-brand {
+        display: none;
+    }
+    .navbar-collapse:not(.show) {
+        display: none;
+    }
+    .navbar-collapse {
+        margin: 1.5rem 0;
+        padding: .25rem 0;
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+    }
+    .navbar-container.mobile-open {
+        flex-direction: column;
+    }
+    .navbar-container.mobile-open .navbar-logo {
+        margin: 1rem 0 !important;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        margin-right: auto !important;
+    }
+    .navbar-nav #fsc-btn { display: none; }
+
+    .dashboard-container {
+        flex-direction: column-reverse; 
+        overflow-y: auto;
+    }
+    .dashboard-item {
+        width: 100%;
+    }
+    .dashboard-main {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .dashboard-secondary {
+        display: none;
+    }
+    .app-plot {
+        width: 100%;
+        padding: .1rem;
+        min-height: 60vw;
+        place-content: center;
+    }
+    .plot-container {
+        width: 75%;
+        margin: .5rem auto;
+    }
+    .app-aside {
+        width: 100%;
+        border: none !important;
+    }
+    .app-aside--desc, .app-aside--link {
+        display: none;
+    }
+}

@@ -1,0 +1,74 @@
+body {
+    --accent-color: rgb(61, 144, 192);
+
+    --shadow-color-1: rgba(0,0,0,.2);
+    --shadow-color-2: rgba(0,0,0,.15);
+    --shadow-color-3: rgba(0,0,0,.10);
+
+    --box-border: #4d4d4d;
+    --box-border-hover: #757575;
+
+}
+body {
+    --txt-color: #171819;
+    --txt-alt-1: #18191A;
+    --txt-alt-2: #1F2021;
+    --txt-alt-3: #242526;
+    --txt-alt-4: #2F2F30;
+
+    --bg-color: #F3F3F3;
+    --bg-alt-1: #F9FAFA;
+    --bg-alt-2: #E6E8EB;
+    --bg-alt-3: #CECFD0;
+    --bg-alt-4: #8C8C8C;
+    --bg-alt-5: #7A7A7A;
+}
+
+
+/**************************
+    Variables de couleur
+***************************/
+
+.bg-black { background-color: #000000; }
+.bg-black.hoverable:hover { background-color: #080809 !important }
+
+.bg-dark { background-color: #171819 }
+.bg-dark.hoverable:hover { background-color: #18191A !important }
+
+.bg-main { background-color: #18191A }
+.bg-main.hoverable:hover { background-color: #1F2021 !important }
+
+.bg-card { background-color: #242526 }
+.bg-card.hoverable:hover { background-color: #2F2F30 }
+
+.bg-alt { background-color: #3A3B3C }
+.bg-alt.hoverable:hover { background-color: #393A3B !important }
+
+.bg-accent { background-color: #3D90C0  }
+.bg-accent.hoverable:hover { background-color: #1F516E !important}
+
+.bg-gray-900 { background-color: #393A3B }
+.bg-gray-800 { background-color: #444546 }
+.bg-gray-700 { background-color: #4E4F50 }
+.bg-gray-600 { background-color: #626364 }
+.bg-gray-500 { background-color: #737476 }
+.bg-gray-400 { background-color: #8A8B8C }
+.bg-gray-300 { background-color: #9FA0A3 }
+
+.text-white { color: #fff !important }
+.text-lighter { color: #F3F3F3 !important }
+.text-primary { color: #F9FAFA !important }
+.text-light { color: #E6E8EB !important }
+.text-secondary { color: #CECFD0 !important }
+
+.text-muted { color: #a9a9aa !important }
+
+/****  BADGES  *****/
+
+span.badge-orien[data-ipp-oriencol] {
+    background-color: rgb(31, 30, 30) !important;
+}
+/*
+span.badge-orien[data-ipp-oriencol="Conservatisme"] {
+    background-color: rgba(0, 168, 204, 0.5) !important;
+}  */

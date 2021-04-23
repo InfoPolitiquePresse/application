@@ -1,0 +1,299 @@
+*, ::after, ::before { box-sizing: border-box; }
+
+/****************
+    Navigation
+*****************/
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #6c757d !important;
+    z-index: 1030;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    transition: ease .15s;
+}
+.navbar-logo {
+    margin: 0 .5rem;
+}
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin: 0 .5rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.navbar-brand-badge {
+    display: inline-block;
+    margin-left: .25rem;
+    padding: .35em .65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+.navbar-collapse {
+    display: flex;
+    flex-basis: auto;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    list-style: none;
+    flex-direction: row;
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+    margin-top: 0;
+}
+.nav-item { list-style: none; }
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    color: rgba(255,255,255,.55) !important;
+}
+.nav-link:hover {
+    color: rgba(255,255,255,.75) !important;
+}
+
+/****************
+    Buttons
+*****************/
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding-right: 1rem ;
+    padding-left: 1rem ;
+    font-size: 1rem;
+    border-radius: .25rem;
+}
+.btn.hoverable { transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+.btn-menu { display: none; }
+
+/************
+    Modal
+*************/
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1050;
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        outline: 0;
+    }
+    .fade:not(.show) {
+        opacity: 0;
+    }
+    .fade {
+        transition: opacity .15s linear;
+    }
+    .modal.fade .modal-dialog {
+        transition: transform .3s ease-out;
+        transform: translate(0,-50px);
+    }
+    .modal-dialog {
+        max-width: 600px;
+        margin: 1.75rem auto;
+        position: relative;
+        width: auto;
+        margin: .5rem;
+        pointer-events: none;
+        height: 50vh;
+    }
+    .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: none;
+        border-radius: .75rem;
+        outline: 0;
+        height: 100%;
+    }
+    .modal-header {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        border-bottom: 1px solid #CECFD0;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+    .modal-footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: flex-end;
+        padding: .75rem;
+        border-top: 1px solid #CECFD0;
+        border-bottom-right-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+    }
+    .modal-title {
+        margin-bottom: 0;
+        line-height: 1.5;
+        font-size: 1.25rem;
+        margin-top: 0;
+        font-weight: 500;
+    }
+    .modal-header .btn-close {
+        cursor: pointer;
+        -webkit-appearance: button;
+        box-sizing: content-box; 
+        padding: .25em !important;
+        border: 0;
+        border-radius: .25rem;
+    }
+
+    .modal-body {
+        position: relative;
+        flex: 1 1 auto;
+        padding: 0 2rem;
+        margin-top: 0;
+    }
+    .modal-body h2 {
+        font-size: 1.25em;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    .modal-body p {
+        line-height: 175%;
+    }
+    .modal.show {
+        background-color: rgba(10,10,10,.8);
+    }
+    .modal.show .modal-dialog {
+        transform: none;
+        margin: 10rem auto;
+    }
+    .modal.fade .modal-dialog {
+        transition: transform .3s ease-out;
+        transform: translate(0,-50px);
+    }
+
+    .modal .tab {
+        flex-grow: 1;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+
+    .modal .tabs-viewer {
+        padding: .25rem 0;
+        text-align: center;
+    }
+    .modal .tabs-viewer i {
+        font-size: 8px;
+        margin: 0 .1rem;
+    }
+
+/*******************
+    Modal d'aide
+********************/
+#helpModal .modal-content>.tab { display: none; }
+
+#helpModal .modal-content[data-ipp-help-active="1"] #helpModal1 { display: block; }
+#helpModal .modal-content[data-ipp-help-active="1"] #helpBackBtn { display: none; }
+#helpModal .modal-content[data-ipp-help-active="2"] #helpModal2 { display: block; }
+#helpModal .modal-content[data-ipp-help-active="3"] #helpModal3 { display: block; }
+#helpModal .modal-content[data-ipp-help-active="4"] #helpModal4 { display: block; }
+#helpModal .modal-content[data-ipp-help-active="4"] #helpNextBtn { display: none; }
+
+#helpModal[data-ipp-firsttime="true"] #helpCloseBtn { display: none; }
+#helpModal .modal-content[data-ipp-help-active="4"] #helpCloseBtn { display: block; color: #57D8A3 !important; }
+
+
+
+
+/***********************
+    Regles générales
+************************/
+
+.pe-2 { padding-right: .5rem !important; }
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.application-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/***************
+    Panneaux 
+****************/
+
+
+.dashboard-container {
+    display: flex;
+    flex-direction: row;    
+    height: 100%;
+    width: 100%;
+}
+.dashboard-main {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+}
+.dashboard-main>* {
+    z-index: 10;
+}
+.dashboard-secondary {
+    width: 25vw;
+    max-width: 25vw;
+    transition: .25s ease-in;
+}
