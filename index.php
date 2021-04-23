@@ -261,6 +261,9 @@ $databaseJson = file_get_contents("https://infopolitiquepresse.com/data/journaux
 								?>
 							</ul>
 						</div>
+						<a href="<?php echo $link = $config->patchnotes->link; ?>" class="btn bg-main text-lighter hoverable nav-link" target="_blank">
+                            <i class="bi bi-github pe-2"></i>GitHub
+                        </a>
                     </div>
                     <div class="modal-footer bg-card text-light" style='border: none; padding-top: .1rem !important;'>
 						<button class="btn bg-card hoverable nav-link" type="button" onclick="$('#updateModal').removeClass('show fade').css('display', 'none')">
